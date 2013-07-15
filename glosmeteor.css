@@ -1,0 +1,102 @@
+/* CSS declarations go here */
+html, body {
+    height: 100%;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    background: #aaaaaa;
+    color: #333333;
+}
+
+textarea {
+	width: 100%;
+}
+
+A:link, A:visited { text-decoration: none }
+A:hover { text-decoration: underline }
+
+#articulo-input {
+	width: 100%;
+}
+
+#header {
+	margin-left: 20px;
+	font-family: 'times new roman', times, serif;
+	color: #09523F;
+	font-size: 1em;
+	font-variant: small-caps;
+	letter-spacing: 2pt;
+}
+
+#aside {
+	 width:30%;
+	 height: 350px;
+	 overflow: scroll; 
+	 float:left;
+    margin: 10px;  
+    padding:10px;
+    background: #fff;
+    border-top:  3px solid #aaa;   
+    border-left: 3px solid #999;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999; 
+    //background: #00FFFF;
+    //-moz-box-shadow: 5px 5px 20px #9370DB;
+    //-webkit-box-shadow: 5px 5px 20px #9370DB;
+}
+
+#section {	
+   margin: 10px ;   /* 21px / 633px */	
+	width:60%;
+	height: 350px;
+	overflow: scroll;
+   float:left;;
+   padding:10px;
+   border-top:  3px solid #bbb; 
+   border-left: 3px solid #999;
+   border-right: 1px solid #999;
+   border-bottom: 1px solid #999; 
+   background: #fff;
+   //background-color: #FFDAB9; //#ddd;
+  // -moz-box-shadow: -5px 5px 20px #B22222;
+  //-webkit-box-shadow: -5px 5px 20px #B22222;
+}
+
+#footer {
+	width:90%;
+	 float:left;
+    margin: 10px;  
+    padding:10px;
+    //background: #777;
+    //border-right: 1px solid #999;
+    //border-bottom: 1px solid #999;
+    font-family: 'times new roman', times, serif;
+    letter-spacing: 2pt;
+    color:#000000;
+    text-shadow: -1px -1px #ffffff;
+}
+
+.listaConceptos.selected {
+  background-color:  #FFDAB9; //orange;
+}
+
+
+@media screen and (max-width: 780px) {
+  #aside{width:100%;}
+  #section{width:100%;}
+  #footer {width:100%;}
+}
+@media screen and (max-width: 650px) {
+  #aside{width:100%;}
+  #section{width:100%;}
+  #footer {width:100%;}
+}
+@media screen and (max-width: 480px) {
+  #aside{width:100%; height: 150px;}
+  #section{width:100%;}
+  #footer {width:100%;} 
+}
+
+
