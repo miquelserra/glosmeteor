@@ -1,0 +1,85 @@
+<head>
+  <title>Glosario Meteor</title>
+</head>
+
+<body>
+ <div id="header">
+  {{> titulo}}
+ </div>
+ <div id="aside"> 
+  {{!> fConceptos}}<!-- formulario para añadir o buscar conceptos, movido al título -->
+  {{> lConceptos}}<!-- lista de conceptos-->
+ </div>
+  <div id="section">
+   <h3>Definición</h3>
+   <div id="article">
+    {{> articulos}}   <!--articulo-->
+   </div>
+    
+ </div>
+  <div id="footer">
+  {{> pie}}
+ </div>
+ </body>
+
+<template name="titulo">
+  <h1>Glosario Meteor - 0.3.2</h1> 
+  <span class="numConceptos">&nbsp; &nbsp; &nbsp; {{numConceptos}} conceptos.<br /></span>
+  {{> fConceptos}} <!-- En el título  para que no desaparezca al hacer scroll en los conceptos-->
+</template>
+
+<template name="fConceptos">
+ <!-- <div id="fijo" style="position:fixed"> -->
+ <!--  <h2>Conceptos</h2> -->
+  <input type="text" id="nConcepto" class='nConcepto' placeholder="Concepto" />  
+      <button type="submit" class="botonMas"> + </button>
+      <button type="submit" class="botonBuscar"> (*) </button>
+ <!-- </div>    --> 	     
+</template>
+
+<template name="lConceptos">
+  <div class="lConceptos" > 
+   {{#each tConceptos}}
+     {{> listaConceptos}}    
+	{{/each}}
+ </div>
+</template>
+
+<template name="listaConceptos">
+ <div class="listaConceptos {{selected}}">
+  <button type="submit" class="botonX" name="botonX"> x </button> 
+  {{concepto}} <br />
+ </div> 
+</template>
+
+<template name="articulos">
+  <div class="articulos">
+   {{#each articulos}}
+	 <b>{{concepto}}:  </b> <br />
+    <div class="articulo {{selected}}">
+     {{#if editing}}
+      <div class="edit">     
+      <textarea class="articulo-input" id="articulo-input" type="text" rows="9" >{{articulo}}</textarea>
+		 <!--input class="articulo-input" id="articulo-input" type="text" value="{{articulo}}" /-->		      
+      </div>
+     {{else}} 
+      <div class="display">
+      <ul><li>{{articulo}}</li> </ul>
+      <br /> 
+       <i> (i)<i> clic para </i><button type="submit" class="botonEdit" name="botonEdit"> Editar </button>
+      </div> 
+      {{/if}}
+     </div>
+	{{/each}}	
+ </div> 
+ {{!> txtarea}}    
+</template>
+
+
+<template name="pie">
+  <b>Créditos:<a href="http://experienciasmeteorjs.blogspot.com.es/2013/06/meteor-del-pensamiento-al-codigo.html"> ¿Cómo se hizo?</a> </b> 
+	<br />
+  Contingut a càrrec d'internautes de bona voluntat.  <br />
+  Contenido a cargo de internautas de buena voluntad. <br />
+  Completed by web surfer of goodwill. <br />
+</template>
