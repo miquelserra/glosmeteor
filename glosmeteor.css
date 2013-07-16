@@ -6,7 +6,7 @@ html, body {
 body {
     font-size: 16px;
     line-height: 1.5;
-    background: #aaaaaa;
+    background: #2F4F4F; //006400;
     color: #333333;
 }
 
@@ -14,7 +14,11 @@ textarea {
 	width: 100%;
 }
 
-A:link, A:visited { text-decoration: none }
+A:link, A:visited { 
+	text-decoration: none;
+	color: #FFFFFF;
+	
+}
 A:hover { text-decoration: underline }
 
 #articulo-input {
@@ -24,10 +28,12 @@ A:hover { text-decoration: underline }
 #header {
 	margin-left: 20px;
 	font-family: 'times new roman', times, serif;
-	color: #09523F;
+	color: #FFFFFF; //09523F;
 	font-size: 1em;
 	font-variant: small-caps;
 	letter-spacing: 2pt;
+	//color:#000000;
+	//text-shadow: -3px -1px #ffffff;
 }
 
 #aside {
@@ -74,12 +80,13 @@ A:hover { text-decoration: underline }
     //border-bottom: 1px solid #999;
     font-family: 'times new roman', times, serif;
     letter-spacing: 2pt;
-    color:#000000;
-    text-shadow: -1px -1px #ffffff;
+    color:#FFF; //000000;
+    //text-shadow: -1px -1px #ffffff;
 }
 
 .listaConceptos.selected {
-  background-color:  #FFDAB9; //orange;
+  background-color:  #FF7F50; //AB9; //orange;
+  color:#FFF;
 }
 
 
