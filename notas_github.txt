@@ -3,10 +3,6 @@ la magia
 
 git remote add origin git@github.com:miquelserra/glosmeteor.git
 
-ssh-keygen -t rsa -C "mserracaldentey@gmail.com"
- /Users/your_user_directory/.ssh/id_rsa
-kgsard58ina
-
 "Updates were rejected because the tip of your current branch is behind its remote counterpart."
 
 http://foro.caad.es/viewtopic.php?f=16&t=5301
