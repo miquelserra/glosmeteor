@@ -18,12 +18,13 @@ y borrarlo.
 También podrás observar la facilidad para organizar el código con plantillas o templates.
 ademas de tratar los eventos (clics de ratón) y botones.
 
-Aquí lo puedes ver en funcionamiento, gracias a que en meteor.com ofrecen gratuitamente
-que lo pubñiques:
+Aquí puedes verlo en funcionamiento, gracias a que en meteor.com ofrecen gratuitamente
+sitio para publicar:
 
 <a href="http://glosmeteor.meteor.com/">http://glosmeteor.meteor.com/</a>
 
 
 =================
 Aunque ahora en glosmeteor.meteor.com los conceptos están dedicados a METEOR, 
-es facil cambiar el título en el html
+es facil cambiar el título en el html, sientete libre de modificarlo 
+y adaptarlo a tus neceidades.
