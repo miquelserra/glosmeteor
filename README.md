@@ -10,10 +10,13 @@ Meteor es nuevo, van por la  Preview 0.6.4.1, escribo esto en julio 2013.
 y he desarrollado esta aplicación para aprender a utilizarlo.
 
 En este código encontrarás:
-Como añadir nuevos documentos a una base de datos MongoDb.
-Buscar lo que coincida con la entrada introducida en un input.
-Editar el contenido.
-y borrar 
+Como añadir nuevos documentos a una colección MongoDb.
+Buscar los documento que coincidan con la entrada introducida en un input.
+Editar el contenido,
+y borrarlo.
+
+También podrás observar la facilidad para organizar el código con plantillas o templates.
+ademas de tratar los eventos (clics de ratón) y botones.
 
 
 =================
