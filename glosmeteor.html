@@ -23,17 +23,17 @@
  </body>
 
 <template name="titulo">
-  <h1>Simple Glosario - 0.3.3</h1> 
-  <span class="numConceptos">&nbsp; &nbsp; &nbsp; {{numConceptos}} conceptos de <b> Meteor </b><br /></span>
+  <h1>Simple Glosario  <small>0.3.5</small></h1> 
+  <span class="numConceptos"> {{numConceptos}} conceptos de <b> Meteor </b><br /></span>
   {{> fConceptos}} <!-- En el título  para que no desaparezca al hacer scroll en los conceptos-->
 </template>
 
 <template name="fConceptos">
  <!-- <div id="fijo" style="position:fixed"> -->
  <!--  <h2>Conceptos</h2> -->
-  <input type="text" id="nConcepto" class='nConcepto' placeholder="Concepto" />  
-      <button type="submit" class="botonMas"> + </button>
-      <button type="submit" class="botonBuscar"> (*) </button>
+  <input type="text" id="nConcepto" class='nConcepto' placeholder="Concepto" /><br />
+  		<button type="submit" class="btn btn-info"> Buscar (*) </button>  
+      <button type="submit" class="btn btn-success"> Añadir + </button>
  <!-- </div>    --> 	     
 </template>
 
@@ -47,7 +47,7 @@
 
 <template name="listaConceptos">
  <div class="listaConceptos {{selected}}">
-  <button type="submit" class="botonX" name="botonX"> x </button> 
+  <button type="submit" class="btn-warning" name="botonX"> x </button> 
   {{concepto}} <br />
  </div> 
 </template>
@@ -66,7 +66,7 @@
       <div class="display">
       <ul><li>{{articulo}}</li> </ul>
       <br /> 
-       <i> (i)<i> clic para </i><button type="submit" class="botonEdit" name="botonEdit"> Editar </button>
+       <i> (i)<i> clic para </i><button type="submit" class="btn btn-success" name="botonEdit"> Editar </button>
       </div> 
       {{/if}}
      </div>

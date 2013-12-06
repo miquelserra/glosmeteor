@@ -65,7 +65,7 @@ var activateTxtArea = function (input) {
 
   Template.fConceptos.events({
    //var vnConcepto = $('#nConcepto').val();
-    'click button.botonMas' : function (e) {
+    'click button.btn-success' : function (e) {
     var vnConcepto = $('#nConcepto').val();
     e.preventDefault();
     if (!vnConcepto) {
@@ -82,31 +82,27 @@ var activateTxtArea = function (input) {
 		     Session.set('filtroArticulo', vnConcepto );
 	     }
      },
-	    'click button.botonBuscar' : function (e) {
-     var vnConcepto = $('#nConcepto').val();
-     e.preventDefault();
-     if (!vnConcepto) {
-       Session.set('filtroConcepto',null);
-		    //alert("Introduce un concepto \n  para buscar ");
+	    'click button.btn-info' : function (e) {
+     	  var vnConcepto = $('#nConcepto').val();
+        e.preventDefault();
+     	  if (!vnConcepto) {
+         Session.set('filtroConcepto',null);
 	     }
-	     else{
-	     	//return Conceptos.find({concepto: {$regex: fc}});  
-		     Session.set('filtroConcepto', vnConcepto );
-	     }
-     }
-  });
+	      Session.set('filtroConcepto', vnConcepto );
+        }
+    });
 
 	Template.fConceptos.events(okCancelEvents(
-  '#nConcepto',
-  {
-    ok: function (value) {
+    '#nConcepto',
+     {
+      ok: function (value) {
     		var vnConcepto = $('#nConcepto').val();
-      //Conceptos.update(this._id, {$set: {articulo: value}});
-      Session.set('filtroConcepto', vnConcepto);
-    },
-    cancel: function () {
-      Session.set('filtroConcepto', null);
-    }
+       //Conceptos.update(this._id, {$set: {articulo: value}});
+       Session.set('filtroConcepto', vnConcepto);
+      },
+      cancel: function () {
+       Session.set('filtroConcepto', null);
+      }
   }));
 
 	Template.listaConceptos.events({
@@ -128,7 +124,9 @@ var activateTxtArea = function (input) {
     return Conceptos.find({}, {sort: { concepto: 1}});
   } 
   else {
-   return Conceptos.find({concepto: {$regex: fc}});  	
+  	//$regex: coincide con el registro que contenga el concepto tecleado en el formulario  
+  	//'i' es para que no distinga entre mayúsculas y minúsculas
+   return Conceptos.find({concepto: {$regex: fc, $options: 'i' }});  	
   	} 
  };
    
