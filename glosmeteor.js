@@ -108,7 +108,7 @@ var activateTxtArea = function (input) {
 	Template.listaConceptos.events({
   	  'click button': function () { 
 		var klausk=prompt("¿ Password ? \n  para borrar" );
-      if (klausk === "loQueQuieras")  //debo pasar la password al servidor
+      if (klausk === "loQueQuieras")  //debo pasar la password al server
        {
         Conceptos.remove(this._id);
        }  	  
